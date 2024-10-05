@@ -1,0 +1,32 @@
+body{
+    background-color: black;
+}
+
+h1{
+    color: white;
+}
+
+/*#p1{
+    color: red;
+}
+
+#p2{
+    color: orange;         /* This is how to style by ID
+}
+
+#p3{
+    color: yellow;
+}
+
+#p4{
+    color: green;
+}*/
+
+.even{
+    color: pink;
+}
+                            /*This is how to style be CLASS*/
+.odd{
+    color: blue;
+}
+
