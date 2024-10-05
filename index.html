@@ -5,18 +5,61 @@
         <link rel = "icon" type = "image/png" href = "qwe.png">
     </head>
     <body>
-        
-        <a href = "https://www.youtube.com/watch?v=HGTJBPNC-Gw&t=248s&ab_channel=BroCode" target = "_blank" title = "Goes to Youtube">
-            click me
-        </a>
-        
-        <br>
 
-        <a href = "mailto:test@fake.com">
-            email me
-        </a>
-
+        <header style = "background-color: #d4a373;">
+            <h1>Welcome to the First Website</h1>
+        </header>
         
+        <main style = "background-color: #FAEDCD;">
+            <a href = "https://www.youtube.com/watch?v=HGTJBPNC-Gw&t=248s&ab_channel=BroCode" target = "_blank" title = "Goes to Youtube">
+                click me
+            </a>
+            
+            <br>
 
+            <a href = "mailto:test@fake.com">
+                email me
+            </a>
+
+            <br><br>
+
+            <p>This is normal text</p>
+            <p>This is <b>bold</b> text</p>
+            <p>This is <i>italic</i> text</p>
+            <p>This is <u>underlined</u> text</p>
+            <p>This is <del>deleted</del> text</p>
+            <p>This is <big>big</big> text</p>
+            <p>This is <small>small</small> text</p>
+            <p>This is <sub>subscirpt</sub> text</p>
+            <p>This is <sup>supercript</sup> text</p>
+            <p>This is <tt>monospaced</tt> text</p>
+            <p>This is <mark style = "background-color: lightgreen">marked</mark> text</p>
+
+            <br><br>
+
+            <h1><span style = "background-color: tomato;">This is a span title</span></h1>
+            <h1><div style = "background-color: cyan;">This is a div title</div></h1>
+
+            <br><br>
+
+            <form action = "index.php" method = "POST">
+                <label for = "username">username:</label>
+                <input type = "text" id = "username"  minlength="6" maxlength="15" placeholder="spongebob"> <br>
+
+                <label for = "password">password:</label>
+                <input type = "password" id = "password"  minlength="6" maxlength="15"><br>
+                
+                <label for = "email">email:</label>
+                <input type = "email" id = "email"  placeholder="Spongebob@gmail.com"><br>
+
+                <label for = "phone">phone:</label>
+                <input type = "tel" id = "phone" required placeholder="+7 777 777 77 77" patter = "[0-9]{3}-[0-9]{3}-[0-9]{4}"><br>
+
+                <br>
+                <input type="reset">
+                <input type = "submit">
+            </form>
+        </main>
+         
     </body>
 </html>
