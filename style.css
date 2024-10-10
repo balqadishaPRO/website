@@ -47,6 +47,16 @@ button:hover {
     background-color: #0056b3;     /* Darker shade on hover */
 }
 
+.overlay {
+    position: absolute;           /* Position over the video */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(70, 131, 201, 0.3); /* Grey color with transparency */
+    z-index: 1;                  /* Keep it behind the content */
+}
+
 .video-background {
     position: fixed;               /* Make the video fixed in the background */
     top: 0;
@@ -56,4 +66,10 @@ button:hover {
     z-index: -1;                   /* Send it behind other content */
     opacity: 0.5;                  /* Set semi-transparent background */
     overflow: hidden;
+}
+
+#backgroundVideo {
+    width: 100%;                  /* Ensure video covers full container */
+    height: 100%;
+    object-fit: cover;            /* Cover without stretching */
 }
