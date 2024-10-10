@@ -1,7 +1,8 @@
 const apiKey = '0c227678969d4b6bb3e173717240910';
 
 function fetchWeather(city) {
-    const url = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`;
+    // Changed HTTP to HTTPS
+    const url = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`;
 
     fetch(url)
         .then(response => {
@@ -17,10 +18,10 @@ function fetchWeather(city) {
                 <h2>Weather in ${data.location.name}, ${data.location.region}, ${data.location.country} (${data.location.localtime})</h2>
                 <p>Temperature: ${data.current.temp_c} °C</p>
                 <p>Feels like: ${data.current.feelslike_c} °C</p>
-                <p>Condition: ${data.current.condition.text} <img src=${data.current.condition.icon}></img></p>
+                <p>Condition: ${data.current.condition.text} <img src="${data.current.condition.icon}" alt="Weather icon"></img></p>
                 <p>Wind: ${data.current.wind_kph} km/h ${getWindDirection(data.current.wind_dir)}</p>
                 <p>Pressure: ${data.current.pressure_mb} mb</p>
-                <p>Humididty: ${data.current.humidity}%</p>
+                <p>Humidity: ${data.current.humidity}%</p>
                 <p>UV index: ${data.current.uv}</p>
             `;
             
@@ -33,44 +34,27 @@ function fetchWeather(city) {
 
 function getWindDirection(abbreviation) {
     switch (abbreviation) {
-        case 'N':
-            return 'North';
-        case 'S':
-            return 'South';
-        case 'E':
-            return 'East';
-        case 'W':
-            return 'West';
-        case 'NE':
-            return 'Northeast';
-        case 'NW':
-            return 'Northwest';
-        case 'SE':
-            return 'Southeast';
-        case 'SW':
-            return 'Southwest';
-        case 'NNE':
-            return 'North-Northeast';
-        case 'ENE':
-            return 'East-Northeast';
-        case 'ESE':
-            return 'East-Southeast';
-        case 'SSE':
-            return 'South-Southeast';
-        case 'SSW':
-            return 'South-Southwest';
-        case 'WSW':
-            return 'West-Southwest';
-        case 'WNW':
-            return 'West-Northwest';
-        case 'NNW':
-            return 'North-Northwest';
-        default:
-            return abbreviation;
+        case 'N': return 'North';
+        case 'S': return 'South';
+        case 'E': return 'East';
+        case 'W': return 'West';
+        case 'NE': return 'Northeast';
+        case 'NW': return 'Northwest';
+        case 'SE': return 'Southeast';
+        case 'SW': return 'Southwest';
+        case 'NNE': return 'North-Northeast';
+        case 'ENE': return 'East-Northeast';
+        case 'ESE': return 'East-Southeast';
+        case 'SSE': return 'South-Southeast';
+        case 'SSW': return 'South-Southwest';
+        case 'WSW': return 'West-Southwest';
+        case 'WNW': return 'West-Northwest';
+        case 'NNW': return 'North-Northwest';
+        default: return abbreviation;
     }
 }
 
-function getWeather() {
-    const city = document.getElementById('cityInput').value;
-    fetchWeather(city);
-}
+// Add event listener when DOM is fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('getWeatherButton').addEventListener('click', getWeather);
+});
