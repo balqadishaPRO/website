@@ -8,11 +8,19 @@
     <link rel="icon", type="images/icon", href="images/icon.png">
 </head>
 <body>
+    <div class="video-background">
+        <video autoplay muted loop id="backgroundVideo">
+            <source src="videos/clouds.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+
+    </div class="content">
     <h1>Please, choose the city you want to know the weather</h1>
     <div class="center">
         <input type="text" id="cityInput" placeholder="Enter city name"/>
         <button onclick="getWeather()">Get Weather</button>
     </div>
+    
     <div id="weatherOutput"></div> <!-- Area to display weather info -->
     <script src="script.js"></script>
 </body>

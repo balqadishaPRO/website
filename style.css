@@ -46,3 +46,14 @@ button {
 button:hover {
     background-color: #0056b3;     /* Darker shade on hover */
 }
+
+.video-background {
+    position: fixed;               /* Make the video fixed in the background */
+    top: 0;
+    left: 0;
+    width: 100vw;                  /* Cover full width */
+    height: 100vh;                 /* Cover full height */
+    z-index: -1;                   /* Send it behind other content */
+    opacity: 0.5;                  /* Set semi-transparent background */
+    overflow: hidden;
+}
