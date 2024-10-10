@@ -54,7 +54,9 @@ function getWindDirection(abbreviation) {
     }
 }
 
-// Add event listener when DOM is fully loaded
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('getWeatherButton').addEventListener('click', getWeather);
-});
+document.getElementById('getWeatherButton').addEventListener('click', getWeather);
+
+function getWeather() {
+    const city = document.getElementById('cityInput').value;
+    fetchWeather(city);
+}
