@@ -1,5 +1,48 @@
-#square {
-    width: 500px;
-    height: 500px;
-    background-color: green;
+#weatherOutput {
+    margin-top: 20px;
+}
+
+body, html {
+    height: 100%;  /* Ensure the body and html take up the full height of the viewport */
+    margin: 5;     /* Remove default margin */
+    display: flex;
+    justify-content: center;       /* Center horizontally */
+    align-items: center;           /* Center vertically */
+    text-align: center;            /* Center text */
+    font-family: Arial, sans-serif; /* Use a better font */
+}
+
+.center {
+    display: flex;                 /* Use flexbox */
+    flex-direction: column;        /* Stack items vertically */
+    align-items: center;           /* Center items horizontally */
+    gap: 10px;     
+}
+
+#cityInput {
+    padding: 10px;                /* Add some padding for aesthetics */
+    font-size: 16px;              /* Increase font size */
+    border-radius: 5px;           /* Optional: Add rounded corners */
+    border: 1px solid #ccc;       /* Optional: Light border */
+}
+
+h1 {
+    position: absolute;
+    top: 20px;                     /* Position header near the top */
+    width: 100%;                   /* Take up full width */
+    text-align: center;            /* Center the text */
+}
+
+button {
+    padding: 10px 20px;            /* Add padding to button */
+    font-size: 16px;               /* Match font size */
+    cursor: pointer;               /* Show pointer on hover */
+    border-radius: 5px;            /* Rounded corners */
+    border: 1px solid #ccc;        /* Light border */
+    background-color: #007BFF;     /* Primary button color */
+    color: white;                  /* White text color */
+}
+
+button:hover {
+    background-color: #0056b3;     /* Darker shade on hover */
 }

@@ -8,9 +8,12 @@
     <link rel="icon", type="images/icon", href="images/icon.png">
 </head>
 <body>
-    <button onclick = "changeColor()">Click me!</button>
-    <div id="square"></div>
-
+    <h1>Please, choose the city you want to know the weather</h1>
+    <div class="center">
+        <input type="text" id="cityInput" placeholder="Enter city name"/>
+        <button onclick="getWeather()">Get Weather</button>
+    </div>
+    <div id="weatherOutput"></div> <!-- Area to display weather info -->
     <script src="script.js"></script>
 </body>
 </html>
