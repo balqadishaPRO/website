@@ -1,30 +1,26 @@
-/* General styling for the body */
 body, html {
-    height: 100%;  /* Ensure the body and html take up the full height of the viewport */
-    margin: 0;     /* Remove default margin */
+    height: 100%;
+    margin: 0;
     display: flex;
-    justify-content: center;       /* Center horizontally */
-    align-items: center;           /* Center vertically */
+    justify-content: center;
+    align-items: center;
     font-family: sans-serif, Arial, Helvetica;
 }
 
-/* Center the content and make sure it stacks vertically */
 .content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;  /* Spacing between elements */
+    gap: 20px;
 }
 
-/* Center the input and button */
 .center {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px; /* Space between input and button */
+    gap: 10px;
 }
 
-/* Style for the input */
 #cityInput {
     padding: 10px;
     font-size: 16px;
@@ -32,7 +28,6 @@ body, html {
     border: 1px solid #ccc;
 }
 
-/* Style for the button */
 button {
     padding: 10px 20px;
     font-size: 16px;
@@ -47,7 +42,6 @@ button:hover {
     background-color: #0056b3;
 }
 
-/* Overlay to give transparency over the video */
 .overlay {
     position: absolute;
     top: 0;
@@ -58,7 +52,6 @@ button:hover {
     z-index: 1;
 }
 
-/* Make sure the video covers the entire background */
 .video-background {
     position: fixed;
     top: 0;
@@ -76,18 +69,16 @@ button:hover {
     object-fit: cover;
 }
 
-/* Container for the weather table */
 #weatherOutputContainer {
     display: flex;
-    justify-content: center; /* Ensure the table stays centered horizontally */
+    justify-content: center;
     width: 100%;
     margin-top: 20px;
 }
 
-/* Weather table styling */
 table {
-    width: auto; /* Allow table to adjust based on its content */
-    margin: 0 auto; /* Center the table horizontally */
+    width: auto;
+    margin: 0 auto;
     border-collapse: collapse;
 }
 
@@ -108,6 +99,6 @@ td {
 }
 
 .weather-icon {
-    width: 20px;  /* Set the desired width */
-    height: 20px; /* Set the desired height */
+    width: 20px;
+    height: 20px;
 }

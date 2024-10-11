@@ -12,8 +12,7 @@ function fetchWeather(city) {
             return response.json();
         })
         .then(data => {
-            console.log(data);  // You can check the data format in the console
-            // Update your UI with the weather data here
+            console.log(data);
             const weatherInfo = `
                 <h2 id="header">Weather in ${data.location.name}, ${data.location.region}, ${data.location.country} (${data.location.localtime})</h2>
                 <table>
@@ -48,7 +47,7 @@ function fetchWeather(city) {
                 </table>
             `;
             
-            document.getElementById('weatherOutput').innerHTML = weatherInfo; // Assuming you have a div to display weather
+            document.getElementById('weatherOutput').innerHTML = weatherInfo;
         })
         .catch(error => {
             console.error('There was a problem with the fetch operation:', error);
