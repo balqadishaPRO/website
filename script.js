@@ -15,14 +15,37 @@ function fetchWeather(city) {
             console.log(data);  // You can check the data format in the console
             // Update your UI with the weather data here
             const weatherInfo = `
-                <h2>Weather in ${data.location.name}, ${data.location.region}, ${data.location.country} (${data.location.localtime})</h2>
-                <p>Temperature: ${data.current.temp_c} °C</p>
-                <p>Feels like: ${data.current.feelslike_c} °C</p>
-                <p>Condition: ${data.current.condition.text} <img src="${data.current.condition.icon}" alt="Weather icon"></img></p>
-                <p>Wind: ${data.current.wind_kph} km/h ${getWindDirection(data.current.wind_dir)}</p>
-                <p>Pressure: ${data.current.pressure_mb} mb</p>
-                <p>Humidity: ${data.current.humidity}%</p>
-                <p>UV index: ${data.current.uv}</p>
+                <h2 id="header">Weather in ${data.location.name}, ${data.location.region}, ${data.location.country} (${data.location.localtime})</h2>
+                <table>
+                    <tr>
+                        <th>Temperature</th>
+                        <td>${data.current.temp_c} °C</td>
+                    </tr>
+                    <tr>
+                        <th>Feels like</th>
+                        <td>${data.current.feelslike_c} °C</td>
+                    </tr>
+                    <tr>
+                        <th>Condition</th>
+                        <td>${data.current.condition.text} <img src="${data.current.condition.icon}" alt="Weather icon" class="weather-icon"></td>
+                    </tr>
+                    <tr>
+                        <th>Wind</th>
+                        <td>${data.current.wind_kph} km/h (${getWindDirection(data.current.wind_dir)})</td>
+                    </tr>
+                    <tr>
+                        <th>Pressure</th>
+                        <td>${data.current.pressure_mb} mb</td>
+                    </tr>
+                    <tr>
+                        <th>Humidity</th>
+                        <td>${data.current.humidity}%</td>
+                    </tr>
+                    <tr>
+                        <th>UV Index</th>
+                        <td>${data.current.uv}</td>
+                    </tr>
+                </table>
             `;
             
             document.getElementById('weatherOutput').innerHTML = weatherInfo; // Assuming you have a div to display weather
